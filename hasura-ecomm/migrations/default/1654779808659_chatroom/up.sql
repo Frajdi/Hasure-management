@@ -4,3 +4,9 @@ CREATE TABLE IF NOT EXISTS "public"."chatroom" (
 "chat_name"TEXT,
 CONSTRAINT"chatroom_pkey"PRIMARY KEY ("id")
 );
+
+ALTER TABLE ONLY "public"."chatroom"
+ADD CONSTRAINT "chatroom_id_fkey"FOREIGN KEY(user_id) REFERENCES users(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE
+NOT DEFERRABLE;
