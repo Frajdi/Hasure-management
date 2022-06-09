@@ -1,12 +1,7 @@
-CREATE TABLE IF NOT EXISTS "public"."chatroom" (
-"id"INTEGER,
-"user_id"INTEGER NOT NULL,
-"chat_name"TEXT,
-CONSTRAINT"chatroom_pkey"PRIMARY KEY ("id")
-);
 
-ALTER TABLE ONLY "public"."chatroom"
-ADD CONSTRAINT "chatroom_id_fkey"FOREIGN KEY(user_id) REFERENCES users(id)
-ON UPDATE CASCADE
-ON DELETE CASCADE
-NOT DEFERRABLE;
+CREATE TABLE IF NOT EXISTS "public"."chatroom" (
+  "id" TEXT,
+  "user_id" TEXT NOT NULL,
+  CONSTRAINT "chatroom_pkey" PRIMARY KEY ("id"),
+  CONSTRAINT "chatroom_id_fkey"FOREIGN KEY (user_id) REFERENCES "public".users(id)
+);
