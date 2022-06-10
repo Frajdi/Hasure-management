@@ -1,0 +1,15 @@
+.App{
+   background-color: hsla(9, 100%, 64%, 0.5);
+   border: 5px solid salmon;
+   color: white;
+   padding: 25px;
+   margin: 79px;
+   font-family: "Lucida Handwriting";
+   font-weight: bold;
+   font-size: 23px; 
+   list-style-type: none;
+   text-shadow: 2px 2px black;
+}
+
+
+
